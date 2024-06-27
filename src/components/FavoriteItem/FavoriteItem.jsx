@@ -5,8 +5,7 @@ import axios from "axios";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import Button from "@mui/material/Button";
 
 function FavoritesItem(props) {
   const dispatch = useDispatch();
@@ -73,13 +72,14 @@ function FavoritesItem(props) {
         ) : (
           <p>{`Current category: ${returnName(gif.category_id)}`}</p>
         )}
-        <IconButton
+        <Button
           aria-label="delete"
           onClick={() => removeFromFavorites(gif.id)}
+          variant="contained"
+          color="error"
         >
           Delete
-          <DeleteForeverIcon variant="filled" />
-        </IconButton>
+        </Button>
         <select
           id="category-select"
           onChange={(e) => addCategory(gif.id, e.target.value)}

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import React, { useState } from "react";
 import Search from "../Search/Search";
 import { Typography } from "@mui/material";
+import { Button } from "@mui/material";
 
 function App() {
   return (
@@ -28,30 +29,34 @@ function App() {
             height: "100px",
           }}
         >
-          <ul
+          <div
             style={{
               display: "flex",
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
             }}
           >
-            <li style={{ marginRight: "50px" }}>
-              <Link to="/">Search</Link>
-            </li>
-          </ul>
-          <ul
-            style={{
-              display: "flex",
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-            }}
-          >
-            <li>
-              <Link to="/favorites">Favorites</Link>
-            </li>
-          </ul>
+            <ul
+              style={{
+                display: "flex",
+                listStyle: "none",
+                margin: 0,
+                padding: 0,
+              }}
+            >
+              <li style={{ marginRight: "50px" }}>
+                <Button component={Link} to="/" variant="contained">
+                  Search
+                </Button>
+              </li>
+              <li>
+                <Button component={Link} to="/favorites" variant="contained">
+                  Favorites
+                </Button>
+              </li>
+            </ul>
+          </div>
         </nav>
         <hr />
         <Route exact path="/">
