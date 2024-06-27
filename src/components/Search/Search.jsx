@@ -45,7 +45,14 @@ function Search() {
   return (
     <div>
       <br />
-      <div sx={{ alignItems: "right" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: "20px",
+        }}
+      >
         <form style={{ left: "50" }}>
           <input
             placeholder="Search GIPHY"
