@@ -21,28 +21,37 @@ function Favorites() {
   };
 
   return (
-    <div id="favorites-page">
-      <Typography style={{ fontSize: 25, marginRight: "10px" }}>
-        Filter by favorites by category:
-      </Typography>
-      <select
-        id="category-select"
-        onChange={handleCategoryChange}
-        value={currentCategory}
+    <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: "20px",
+        }}
       >
-        <option value="all">All</option>
-        {categories.map((category) => {
-          return (
-            <option
-              key={category.id}
-              className="category-option"
-              value={category.id}
-            >
-              {category.name}
-            </option>
-          );
-        })}
-      </select>
+        <Typography style={{ fontSize: 25, marginRight: "10px" }}>
+          Filter by favorites by category:
+        </Typography>
+        <select
+          id="category-select"
+          onChange={handleCategoryChange}
+          value={currentCategory}
+        >
+          <option value="all">All</option>
+          {categories.map((category) => {
+            return (
+              <option
+                key={category.id}
+                className="category-option"
+                value={category.id}
+              >
+                {category.name}
+              </option>
+            );
+          })}
+        </select>
+      </div>
       <hr />
       <br />
       <FavoriteList />
