@@ -65,7 +65,7 @@ function FavoritesItem(props) {
         component="img"
         image={gif.GIPHY_URL}
         alt={gif.GIPHY_Title}
-        sx={{ maxHeight: "500px", minHeight: "250px" }}
+        sx={{ maxHeight: "500px", minHeight: "300px" }}
       />
       <CardActions sx={{ textAlign: "center" }}>
         {gif.category_id == null ? (

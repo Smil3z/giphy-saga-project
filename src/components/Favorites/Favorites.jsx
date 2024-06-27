@@ -3,6 +3,7 @@ import "./Favorites.css";
 import FavoriteList from "../FavoriteList/FavoriteList";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Typography } from "@mui/material";
 
 function Favorites() {
   const dispatch = useDispatch();
@@ -21,7 +22,9 @@ function Favorites() {
 
   return (
     <div id="favorites-page">
-      <h5>Filter by favorites by category:</h5>
+      <Typography style={{ fontSize: 25, marginRight: "10px" }}>
+        Filter by favorites by category:
+      </Typography>
       <select
         id="category-select"
         onChange={handleCategoryChange}
