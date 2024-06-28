@@ -20,7 +20,7 @@ function App() {
           color: "white",
         }}
       >
-        Giphy Search!
+        Giphy Search App!
       </Typography>
       <Router>
         <nav
