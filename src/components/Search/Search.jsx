@@ -7,6 +7,7 @@ import CardActions from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import Button from "@mui/material/Button";
 
 const API_KEY = "YASEDgFgiSaJLWJEYAraiXsmLJ86SUXz";
 
@@ -55,12 +56,15 @@ function Search() {
       >
         <form style={{ left: "50" }}>
           <input
+            style={{ height: "30px" }}
             placeholder="Search GIPHY"
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button onClick={sendSearch}>Click me to search</button>
+          <Button onClick={sendSearch} variant="contained">
+            Submit
+          </Button>
         </form>
       </div>
       <br />
