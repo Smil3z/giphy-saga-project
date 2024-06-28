@@ -73,6 +73,7 @@ function Search() {
             className="gif-card"
             elevation={8}
             sx={{
+              margin: "auto",
               maxWidth: "300px",
               marginTop: "10px",
               marginBottom: "10px",

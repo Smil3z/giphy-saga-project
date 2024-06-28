@@ -1,21 +1,23 @@
 import { HashRouter as Router, Route } from "react-router-dom";
 import Favorites from "../Favorites/Favorites";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import React, { useState } from "react";
+import React from "react";
 import Search from "../Search/Search";
 import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
 
 function App() {
   return (
-    <div>
+    <div
+      style={{ backgroundColor: "black", color: "white", minHeight: "100vh" }}
+    >
       <Typography
         style={{
           fontSize: "50px",
           fontFamily: "Roboto",
-          Helvetica: "Arial",
           textAlign: "center",
           fontWeight: "bold",
+          color: "white",
         }}
       >
         Giphy Search!
@@ -26,7 +28,7 @@ function App() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "100px",
+            height: "75px",
           }}
         >
           <div
@@ -58,7 +60,6 @@ function App() {
             </ul>
           </div>
         </nav>
-        <hr />
         <Route exact path="/">
           <Search />
         </Route>

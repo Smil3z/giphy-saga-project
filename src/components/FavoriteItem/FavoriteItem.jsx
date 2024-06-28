@@ -6,6 +6,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
+import { Typography } from "@mui/material";
 
 function FavoritesItem(props) {
   const dispatch = useDispatch();
@@ -66,11 +67,15 @@ function FavoritesItem(props) {
         alt={gif.GIPHY_Title}
         sx={{ maxHeight: "500px", minHeight: "300px" }}
       />
-      <CardActions sx={{ textAlign: "center" }}>
+      <CardActions sx={{ textAlign: "center", backgroundColor: "purple" }}>
         {gif.category_id == null ? (
-          <p>{"Category unassigned"}</p>
+          <Typography sx={{ fontSize: "20px" }}>
+            {"Category unassigned"}
+          </Typography>
         ) : (
-          <p>{`Current category: ${returnName(gif.category_id)}`}</p>
+          <Typography
+            sx={{ fontSize: "20px" }}
+          >{`Current category: ${returnName(gif.category_id)}`}</Typography>
         )}
         <Button
           aria-label="delete"
