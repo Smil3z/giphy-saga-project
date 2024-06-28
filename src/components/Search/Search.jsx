@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Button from "@mui/material/Button";
 
@@ -87,13 +86,22 @@ function Search() {
               component="img"
               image={item.images.fixed_height.url}
               alt={item.title}
-              sx={{ maxHeight: "500px", minHeight: "300px" }}
+              sx={{
+                maxHeight: "500px",
+                minHeight: "300px",
+              }}
             />
-            <CardActions sx={{ textAlign: "center" }}>
-              <IconButton aria-label="delete" onClick={() => handleClick(item)}>
+            <CardActions
+              sx={{ textAlign: "center", backgroundColor: "purple" }}
+            >
+              <Button
+                variant="contained"
+                aria-label="delete"
+                onClick={() => handleClick(item)}
+              >
                 Add to Favorites
                 <FavoriteIcon variant="filled" sx={{ color: "darkred" }} />
-              </IconButton>
+              </Button>
             </CardActions>
           </Card>
         ))}
